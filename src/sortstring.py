@@ -4,9 +4,12 @@ stringlist = []
 Memory = ""
 
 def main():
-	f = open("stringlist.txt", "w+")
-	for i in f:
+	f = open("stringlist.txt", "r")
+	for i in f.readlines():
 		stringlist.append(i)
+		print(i)
+
+	print(f.readlines())
 
 	f.close()
 
